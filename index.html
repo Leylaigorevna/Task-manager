@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Task manager</title>
+</head>
+<body>
+    <header class="header">
+        <h3> Hello! I'm you're task-manager</h3>
+    </header>
+    <section class="controls">
+        <input class="taskFinder" type="text" placeholder="Search tasks...">
+
+        <select class="sortTasks">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="completed">Completed</option>
+        </select>
+
+        <select class="taskFilter">
+            <option value="createdAt">By creation date</option>
+            <option value="dueDate">By deadline</option>
+            <option value="priority">By priority</option>
+        </select>
+
+    </section>
+    <form class="task-form">
+        <input class="taskTitleForm" id="task-title" type="text" placeholder="Task title">
+        <textarea class="newTask" id="task-description" placeholder="Enter description..."></textarea>
+        <select class="priorityOption" id="task-priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <input class="taskDate" id="task-date" type="date">
+        <div class="addTaskButton">
+           <button class="button" type="submit">Add Task</button> 
+        </div>
+    </form>
+    <section class="task-list"></section>
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+.header {
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    gap: 2px;
+}
+
+.taskFinder {
+    border-radius: 4px;
+    width: 50%;
+
+}
+
+.sortTasks {
+    border-radius: 4px;
+    width: 25%;
+}
+
+.taskFilter {
+    border-radius: 4px;
+    width: 25%;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.taskTitleForm {
+    border-radius: 4px;
+    max-width: 100%;
+    width: 100%
+}
+
+.newTask {
+    margin-top: 4px;
+    resize: none;
+    width: 50%;
+    height: 100px;
+    border-radius: 4px;
+}
+
+.priorityOption {
+    margin-left: 53%;
+    margin-top: -104px;
+    max-width: 47%;
+}
+
+.taskDate {
+    display: block;
+    box-sizing: border-box;
+    margin-left: 53%;
+    max-width: 47%;
+    margin-top: 4px;
+}
+
+.addTaskButton {
+    margin-top: 65px;
+} 
+.button {
+    border-radius: 4px;
+}
