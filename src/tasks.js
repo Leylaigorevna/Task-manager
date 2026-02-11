@@ -12,6 +12,12 @@ export function updateTask(id, updates) {
 }
 
 export function addTask(taskData) {
+
+    if (!taskData.title || taskData.title.trim() === '') {
+    alert('Please, enter task title!');
+    return;
+  }
+
   const newTask = {
     id: crypto.randomUUID(),
     title: taskData.title,
@@ -22,10 +28,7 @@ export function addTask(taskData) {
     completed: false,
     createdAt: new Date().toISOString()
   };
-  if (!taskData.title || taskData.title.trim() === '') {
-    alert('Please, enter task title!');
-    return;
-  }
+  
 
   state.tasks.push(newTask);
 
