@@ -1,5 +1,14 @@
 import { state } from './state.js';
 
+export function updateTask(id, updates) {
+    const taskIndex = state.tasks.findIndex(task => task.id === id);
+    if (taskIndex !== -1) {
+        state.tasks[taskIndex] = { 
+            ...state.tasks[taskIndex], 
+            ...updates };
+    }
+}
+
 export function addTask(taskData) {
   const newTask = {
     id: crypto.randomUUID(),
