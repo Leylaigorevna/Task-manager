@@ -5,6 +5,7 @@ console.log(state);
 
 import { addTask } from './tasks.js';
 import { renderTasks } from './ui.js';
+renderTasks();
 
 const form = document.querySelector('.task-form');
 

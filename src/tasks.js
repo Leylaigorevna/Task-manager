@@ -7,6 +7,8 @@ export function updateTask(id, updates) {
             ...state.tasks[taskIndex], 
             ...updates };
     }
+
+    saveToLocalStorage();
 }
 
 export function addTask(taskData) {
@@ -26,8 +28,15 @@ export function addTask(taskData) {
   }
 
   state.tasks.push(newTask);
+
+  saveToLocalStorage();
 }
 
 export function deleteTask(id) {
   state.tasks = state.tasks.filter(task => task.id !== id);
+  saveToLocalStorage();
+}
+
+function saveToLocalStorage () {
+    localStorage.setItem('tasks', JSON.stringify(state.tasks));
 }
