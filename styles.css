@@ -63,3 +63,32 @@
 .button {
     border-radius: 4px;
 }
+
+.confirm-delete {
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #ffecec;
+  border: 1px solid #f5c2c2;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.confirm-yes,
+.confirm-no {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+.confirm-yes:hover {
+  background-color: #f8d7da;
+}
+.confirm-no:hover {
+  background-color: #e2e2e2;
+}

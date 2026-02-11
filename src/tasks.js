@@ -11,11 +11,14 @@ export function addTask(taskData) {
     completed: false,
     createdAt: new Date().toISOString()
   };
-
   if (!taskData.title || taskData.title.trim() === '') {
     alert('Please, enter task title!');
     return;
   }
 
   state.tasks.push(newTask);
+}
+
+export function deleteTask(id) {
+  state.tasks = state.tasks.filter(task => task.id !== id);
 }
