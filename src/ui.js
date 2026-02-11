@@ -10,6 +10,8 @@ export function renderTasks() {
     taskElement.classList.add('task');
 
     taskElement.innerHTML = `
+      <input type="checkbox" class="completeCheckbox" ${task.completed ? 'checked' : ''}>
+      <label>Completed</label>
       <h3>${task.title}</h3>
       <p>${task.description}</p>
       <small>Priority: ${task.priority};</small>
@@ -43,6 +45,12 @@ export function renderTasks() {
     });
 
     container.appendChild(taskElement);
+    const completeCheckbox = taskElement.querySelector('.completeCheckbox');
+
+    completeCheckbox.addEventListener('change', () => {
+        updateTask(task.id, { completed: completeCheckbox.checked });
+        renderTasks();
+    });
 
     editBtn.addEventListener('click', () => {
   taskElement.innerHTML = `
